@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-container-notification
+    environment:
+      - SA_PASSWORD=Person123
+      - ACCEPT_EULA=Y
+
+  testetecnicoidealsoft.api:
+    image: ${DOCKER_REGISTRY-}testetecnicoidealsoftapi
+    container_name: api-ideal-soft
+    build:
+      context: .
+      dockerfile: TesteTecnicoIdealSoft.API/Dockerfile
+    depends_on:
+      - "sqldata"
