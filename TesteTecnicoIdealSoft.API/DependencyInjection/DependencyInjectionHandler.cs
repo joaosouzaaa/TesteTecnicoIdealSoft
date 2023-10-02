@@ -11,7 +11,7 @@ public static class DependencyInjectionHandler
 
         services.AddDbContext<IdealSoftDbContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString("ContainerConnection"));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             options.EnableDetailedErrors();
             options.EnableSensitiveDataLogging();
         });

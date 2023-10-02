@@ -47,6 +47,14 @@ public sealed class PersonBuilder
             Telefone = _telefone
         };
 
+    public PersonBuilder WithId(int id)
+    {
+        _id = id;
+
+        return this;
+    }
+
+
     public PersonBuilder WithNome(string nome)
     {
         _nome = nome;

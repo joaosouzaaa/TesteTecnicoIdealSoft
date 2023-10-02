@@ -24,11 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ControllersTests\" />
-    <Folder Include="MappersTests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TestBuilders\TestBuilders.csproj" />
     <ProjectReference Include="..\TesteTecnicoIdealSoft.API\TesteTecnicoIdealSoft.API.csproj" />
   </ItemGroup>

@@ -12,7 +12,7 @@ public sealed class PersonValidatorTests
 	}
 
 	[Fact]
-	public async Task ValidatePersonAsync_SuccessfullScenario_ReturnsTrue()
+	public async Task ValidatePersonAsync_SuccessfulScenario_ReturnsTrue()
 	{
 		// A
 		var personToValidate = PersonBuilder.NewObject().DomainBuild();
