@@ -9,9 +9,15 @@ public static class DependencyInjectionHandler
     {
         services.AddCorsDependencyInjection();
 
+        string connectionString;
+        if(Environment.GetEnvironmentVariable("DOCKER_ENVIROMENT") == "DEV_DOCKER")
+            connectionString = configuration.GetConnectionString("ContainerConnection");
+        else
+            connectionString = configuration.GetConnectionString("DefaultConnection");
+
         services.AddDbContext<IdealSoftDbContext>(options =>
         {
-            options.UseSqlServer(configuration.GetConnectionString("ContainerConnection"));
+            options.UseSqlServer(connectionString);
             options.EnableDetailedErrors();
             options.EnableSensitiveDataLogging();
         });

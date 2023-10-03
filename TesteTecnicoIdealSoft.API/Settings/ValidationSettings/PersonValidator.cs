@@ -20,6 +20,6 @@ public sealed class PersonValidator : AbstractValidator<Person>
             : EMessage.InvalidLength.Description().FormatTo("Sobrenome", "3 a 100"));
 
         RuleFor(p => p.Telefone).Matches(@"^\d{11}$")
-            .WithMessage(p => EMessage.InvalidFormat.Description().FormatTo("Telefone", "99999999999"));
+            .WithMessage(p => EMessage.InvalidFormat.Description().FormatTo("Telefone", "00000000000"));
     }
 }

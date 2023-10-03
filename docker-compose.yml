@@ -16,3 +16,8 @@ services:
       dockerfile: TesteTecnicoIdealSoft.API/Dockerfile
     depends_on:
       - "sqldata"
+    environment:
+      - DOCKER_ENVIROMENT=DEV_DOCKER
+    ports:
+      - "5078:80"
+      - "7188:443"

@@ -1,7 +1,7 @@
-﻿namespace TesteTecnicoIdealSoft.WPF.Responses;
-public sealed class PersonResponse
+﻿namespace TesteTecnicoIdealSoft.WPF.Requests.Person;
+
+public sealed class PersonSaveRequest
 {
-    public required int Id { get; set; }
     public required string Nome { get; set; }
     public required string Sobrenome { get; set; }
     public required string Telefone { get; set; }
